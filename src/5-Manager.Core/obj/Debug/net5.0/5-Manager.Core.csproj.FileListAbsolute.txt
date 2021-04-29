@@ -1,0 +1,12 @@
+G:\.NET5 v2\Manager\src\5-Manager.Core\bin\Debug\net5.0\5-Manager.Core.deps.json
+G:\.NET5 v2\Manager\src\5-Manager.Core\bin\Debug\net5.0\5-Manager.Core.dll
+G:\.NET5 v2\Manager\src\5-Manager.Core\bin\Debug\net5.0\ref\5-Manager.Core.dll
+G:\.NET5 v2\Manager\src\5-Manager.Core\bin\Debug\net5.0\5-Manager.Core.pdb
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.csprojAssemblyReference.cache
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.GeneratedMSBuildEditorConfig.editorconfig
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.AssemblyInfoInputs.cache
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.AssemblyInfo.cs
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.csproj.CoreCompileInputs.cache
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.dll
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\ref\5-Manager.Core.dll
+G:\.NET5 v2\Manager\src\5-Manager.Core\obj\Debug\net5.0\5-Manager.Core.pdb
