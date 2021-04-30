@@ -2,8 +2,8 @@
 {
     public class ResultViewModel
     {
-        public string Message { get; set; }
-        public bool Success { get; set; }
-        public dynamic Data { get; set; }
+        public string Mensagem { get; set; }
+        public bool Sucesso { get; set; }
+        public dynamic Dados { get; set; } 
     }
 }

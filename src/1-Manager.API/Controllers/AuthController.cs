@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Manager.API.Token;
 using Manager.API.Utilities;
 using Manager.API.ViewModes;
@@ -26,25 +27,23 @@ namespace Manager.API.Controllers
 
         [HttpPost]
         [Route("/api/v1/auth/login")]
-        public IActionResult Login([FromBody] LoginViewModel loginViewModel)
+        public async Task<IActionResult> Login([FromBody] LoginViewModel loginViewModel)
         {
             try
             {
-                var tokenLogin = _configuration["Jwt:Login"];
-                var tokenPassword = _configuration["Jwt:Password"];
+                var usuario = await _userService.GetByEmail(loginViewModel.Email);
 
-                var login = _userService.Login(loginViewModel.Email); //Consultar banco de dados  
-
-                if (loginViewModel.Login == tokenLogin && loginViewModel.Password == tokenPassword)
+                if (loginViewModel.Email.ToLower() == usuario.Email.ToLower() /*&& loginViewModel.Password == usuario.Password*/)
                 {
                     return Ok(new ResultViewModel
                     {
-                        Message = "Usuário autenticado com sucesso!",
-                        Success = true,
-                        Data = new
+                        Mensagem = "Usuário autenticado com sucesso!",
+                        Sucesso = true,
+                        Dados = new
                         {
+                            usuario,
                             Token = _tokenGenerator.GenerateToken(),
-                            TokenExpires = DateTime.UtcNow.AddHours(int.Parse(_configuration["Jwt:HoursToExpire"]))
+                            TokenExpira = DateTime.Now.AddHours(int.Parse(_configuration["Jwt:HoursToExpire"])) 
                         }
                     });
                 }

@@ -9,9 +9,9 @@ namespace Manager.API.Utilities
         {
             return new ResultViewModel
             {
-                Message = "Ocorreu algum erro interno na aplicação, por favor tente novamente.",
-                Success = false,
-                Data = null
+                Mensagem = "Ocorreu algum erro interno na aplicação, por favor tente novamente.",
+                Sucesso = false,
+                Dados = null
             };
         }
 
@@ -19,9 +19,9 @@ namespace Manager.API.Utilities
         {
             return new ResultViewModel
             {
-                Message = message,
-                Success = false,
-                Data = null
+                Mensagem = message,
+                Sucesso = false,
+                Dados = null
             };
         }
 
@@ -29,9 +29,9 @@ namespace Manager.API.Utilities
         {
             return new ResultViewModel
             {
-                Message = message,
-                Success = false,
-                Data = errors
+                Mensagem = message,
+                Sucesso = false,
+                Dados = errors
             };
         }
 
@@ -39,9 +39,9 @@ namespace Manager.API.Utilities
         {
             return new ResultViewModel
             {
-                Message = "A combinação de login e senha está incorreta!",
-                Success = false,
-                Data = null
+                Mensagem = "A combinação de email e senha está incorreta!",
+                Sucesso = false,
+                Dados = null
             };
         }
     }

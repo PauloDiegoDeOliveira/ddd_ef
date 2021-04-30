@@ -37,9 +37,9 @@ namespace Manager.API.Controllers
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário criado com sucesso!",
-                    Success = true,
-                    Data = userCreated
+                    Mensagem = "Usuário criado com sucesso!",
+                    Sucesso = true,
+                    Dados = userCreated
                 });
             }
             catch (DomainException ex)
@@ -65,9 +65,9 @@ namespace Manager.API.Controllers
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário atualizado com sucesso!",
-                    Success = true,
-                    Data = userUpdated
+                    Mensagem = "Usuário atualizado com sucesso!",
+                    Sucesso = true,
+                    Dados = userUpdated
                 });
             }
             catch (DomainException ex)
@@ -91,9 +91,9 @@ namespace Manager.API.Controllers
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário removido com sucesso!",
-                    Success = true,
-                    Data = null
+                    Mensagem = "Usuário removido com sucesso!",
+                    Sucesso = true,
+                    Dados = null
                 });
             }
             catch (DomainException ex)
@@ -118,16 +118,16 @@ namespace Manager.API.Controllers
                 if (user == null)
                     return Ok(new ResultViewModel
                     {
-                        Message = "Nenhum usuário foi encontrado com o ID informado.",
-                        Success = true,
-                        Data = user
+                        Mensagem = "Nenhum usuário foi encontrado com o ID informado.",
+                        Sucesso = true,
+                        Dados = user
                     });
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário encontrado com sucesso!",
-                    Success = true,
-                    Data = user
+                    Mensagem = "Usuário encontrado com sucesso!",
+                    Sucesso = true,
+                    Dados = user
                 });
             }
             catch (DomainException ex)
@@ -152,9 +152,9 @@ namespace Manager.API.Controllers
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuários encontrados com sucesso!",
-                    Success = true,
-                    Data = allUsers
+                    Mensagem = "Usuários encontrados com sucesso!",
+                    Sucesso = true,
+                    Dados = allUsers
                 });
             }
             catch (DomainException ex)
@@ -180,17 +180,17 @@ namespace Manager.API.Controllers
                 if (user == null)
                     return Ok(new ResultViewModel
                     {
-                        Message = "Nenhum usuário foi encontrado com o email informado.",
-                        Success = true,
-                        Data = user
+                        Mensagem = "Nenhum usuário foi encontrado com o email informado.",
+                        Sucesso = true,
+                        Dados = user
                     });
 
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário encontrado com sucesso!",
-                    Success = true,
-                    Data = user
+                    Mensagem = "Usuário encontrado com sucesso!",
+                    Sucesso = true,
+                    Dados = user
                 });
             }
             catch (DomainException ex)
@@ -215,16 +215,16 @@ namespace Manager.API.Controllers
                 if (allUsers.Count == 0)
                     return Ok(new ResultViewModel
                     {
-                        Message = "Nenhum usuário foi encontrado com o nome informado",
-                        Success = true,
-                        Data = null
+                        Mensagem = "Nenhum usuário foi encontrado com o nome informado",
+                        Sucesso = true,
+                        Dados = null
                     });
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário encontrado com sucesso!",
-                    Success = true,
-                    Data = allUsers
+                    Mensagem = "Usuário encontrado com sucesso!",
+                    Sucesso = true,
+                    Dados = allUsers
                 });
             }
             catch (DomainException ex)
@@ -250,16 +250,16 @@ namespace Manager.API.Controllers
                 if (allUsers.Count == 0)
                     return Ok(new ResultViewModel
                     {
-                        Message = "Nenhum usuário foi encontrado com o email informado",
-                        Success = true,
-                        Data = null
+                        Mensagem = "Nenhum usuário foi encontrado com o email informado",
+                        Sucesso = true,
+                        Dados = null
                     });
 
                 return Ok(new ResultViewModel
                 {
-                    Message = "Usuário encontrado com sucesso!",
-                    Success = true,
-                    Data = allUsers
+                    Mensagem = "Usuário encontrado com sucesso!",
+                    Sucesso = true,
+                    Dados = allUsers
                 });
             }
             catch (DomainException ex)

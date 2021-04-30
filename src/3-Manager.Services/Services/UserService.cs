@@ -96,12 +96,5 @@ namespace Manager.Services.Services
 
             return _mapper.Map<UserDTO>(user);
         }
-
-        public async Task<UserDTO> Login(string login) 
-        {
-            var user = await _userRepository.Login(login); 
-
-            return _mapper.Map<UserDTO>(user);
-        }
     }
 }

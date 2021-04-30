@@ -58,19 +58,5 @@ namespace Manager.Infra.Repositories
 
             return allUsers;
         }
-
-        public async Task<User> Login(string login) 
-        {
-            var user = await _context.Users
-                                   .Where
-                                   (
-                                        x =>
-                                            x.Email.ToLower() == login.ToLower()
-                                    )
-                                    .AsNoTracking()
-                                    .ToListAsync();
-
-            return user.FirstOrDefault();
-        }
     }
 }
