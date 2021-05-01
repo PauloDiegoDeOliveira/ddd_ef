@@ -13,6 +13,7 @@ namespace Manager.Services.Interfaces
         Task<List<UserDTO>> Get();
         Task<List<UserDTO>> SearchByName(string name);
         Task<List<UserDTO>> SearchByEmail(string email);
-        Task<UserDTO> GetByEmail(string email);             
+        Task<UserDTO> GetByEmail(string email);
+        Task<UserDTO> Login(string email, string password);  
     }
 }

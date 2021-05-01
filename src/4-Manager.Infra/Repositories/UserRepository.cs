@@ -58,5 +58,19 @@ namespace Manager.Infra.Repositories
 
             return allUsers;
         }
+
+        public async Task<User> FindLogin(string email, string password)    
+        {
+            var user = await _context.Users
+                                   .Where
+                                   (
+                                        x =>
+                                            x.Email.ToLower() == email.ToLower()
+                                    )
+                                    .AsNoTracking()
+                                    .ToListAsync();
+
+            return user.FirstOrDefault();
+        }
     }
 }

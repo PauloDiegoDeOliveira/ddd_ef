@@ -31,9 +31,9 @@ namespace Manager.API.Controllers
         {
             try
             {
-                var usuario = await _userService.GetByEmail(loginViewModel.Email);
+                var usuario = await _userService.Login(loginViewModel.Email, loginViewModel.Password);  
 
-                if (loginViewModel.Email.ToLower() == usuario.Email.ToLower() /*&& loginViewModel.Password == usuario.Password*/)
+                if (loginViewModel.Email.ToLower() == usuario.Email.ToLower() && loginViewModel.Password == usuario.Password)
                 {
                     return Ok(new ResultViewModel
                     {

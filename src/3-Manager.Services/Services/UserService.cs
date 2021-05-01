@@ -96,5 +96,14 @@ namespace Manager.Services.Services
 
             return _mapper.Map<UserDTO>(user);
         }
+
+        public async Task<UserDTO> Login(string email, string password)
+        {
+            var user = await _userRepository.FindLogin(email, password);
+                   
+            user.ChangePassword(_rijndaelCryptography.Decrypt(user.Password));
+
+            return _mapper.Map<UserDTO>(user);
+        }
     }
 }
